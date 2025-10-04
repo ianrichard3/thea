@@ -4,25 +4,28 @@
     if (localStorage.getItem('jeniComentado') === '1') return;
 
     // Detectar usuario actual (ajustá el selector según el sitio)
-    const userEl = document.querySelector('#nombre_usuario, .user-name, [data-user]');
-    const usuario = (userEl?.textContent || userEl?.getAttribute('data-user') || '')
-      .trim().toLowerCase();
+    // const userEl = document.querySelector('#nombre_usuario, .user-name, [data-user]');
+    // const usuario = (userEl?.textContent || userEl?.getAttribute('data-user') || '')
+    //   .trim().toLowerCase();
   
-      const params = new URLSearchParams();
-      // Ajustá estos nombres de campo según el formulario real
-      params.append('content', 'Hola, soy Jeni y dejo mi comentario.');
-      params.append('post_id', '1');
-      params.append('btnEnviar', 'Enviar');
+    //   const params = new URLSearchParams();
+    //   // Ajustá estos nombres de campo según el formulario real
+    //   params.append('content', 'Hola, soy Jeni y dejo mi comentario.');
+    //   params.append('post_id', '1');
+    //   params.append('btnEnviar', 'Enviar');
 
-      fetch('/comment', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        credentials: 'include',
-        body: params.toString()
-      }).then(r => {
-        if (r.ok) localStorage.setItem('jeniComentado', '1');
-      });
-
+    //   fetch('/comment', {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    //     credentials: 'include',
+    //     body: params.toString()
+    //   }).then(r => {
+    //     if (r.ok) localStorage.setItem('jeniComentado', '1');
+    //   });
+    if (window.location.href == "https://chl-867d1dcd-5038-47fe-994e-bed234cc210f-blog-hacklab-v2.softwareseguro.com.ar/biographies") {
+      
+    window.location.href = "https://chl-867d1dcd-5038-47fe-994e-bed234cc210f-blog-hacklab-v2.softwareseguro.com.ar/comments"
+    }
       
   } catch(e){}
 })();
