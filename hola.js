@@ -22,10 +22,10 @@
     //   }).then(r => {
     //     if (r.ok) localStorage.setItem('jeniComentado', '1');
     //   });
-    if (window.location.href == "https://chl-867d1dcd-5038-47fe-994e-bed234cc210f-blog-hacklab-v2.softwareseguro.com.ar/biographies") {
+    // if (window.location.href == "https://chl-867d1dcd-5038-47fe-994e-bed234cc210f-blog-hacklab-v2.softwareseguro.com.ar/biographies") {
       
-    window.location.href = "https://chl-867d1dcd-5038-47fe-994e-bed234cc210f-blog-hacklab-v2.softwareseguro.com.ar/comments"
-    }
+    window.location.href = "/comments"
+    // }
       
   } catch(e){}
 })();
