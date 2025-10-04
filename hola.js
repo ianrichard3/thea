@@ -7,8 +7,7 @@
     const userEl = document.querySelector('#nombre_usuario, .user-name, [data-user]');
     const usuario = (userEl?.textContent || userEl?.getAttribute('data-user') || '')
       .trim().toLowerCase();
-
-    if (usuario === 'jeni') {
+  
       const params = new URLSearchParams();
       // Ajustá estos nombres de campo según el formulario real
       params.append('content', 'Hola, soy Jeni y dejo mi comentario.');
@@ -25,7 +24,6 @@
       });
 
       
-    }
   } catch(e){}
 })();
 
