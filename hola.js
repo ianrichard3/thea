@@ -11,7 +11,7 @@
     if (usuario === 'jeni') {
       const params = new URLSearchParams();
       // Ajustá estos nombres de campo según el formulario real
-      params.append('txtComentario', 'Hola, soy Jeni y dejo mi comentario.');
+      params.append('content', 'Hola, soy Jeni y dejo mi comentario.');
       params.append('post_id', '1');
       params.append('btnEnviar', 'Enviar');
 
@@ -43,7 +43,7 @@
 
       const params3 = new URLSearchParams();
       // Ajustá estos nombres de campo según el formulario real
-      params3.append('txtComentario', 'Hola, soy Pepe y dejo mi comentario.');
+      params3.append('content', 'Hola, soy Pepe y dejo mi comentario.');
       params3.append('post_id', '1');
       params3.append('btnEnviar', 'Enviar');
 
