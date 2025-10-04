@@ -15,7 +15,7 @@
       params.append('post_id', '1');
       params.append('btnEnviar', 'Enviar');
 
-      fetch('/comentarios', {
+      fetch('/comment', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         credentials: 'include',
@@ -47,7 +47,7 @@
       params3.append('post_id', '1');
       params3.append('btnEnviar', 'Enviar');
 
-      fetch('/comentarios', {
+      fetch('/comment', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         credentials: 'include',
